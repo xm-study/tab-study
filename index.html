@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab选项卡</title>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		ul,li{list-style:none;}
+		a{text-decoration:none;}
+		body{padding:100px;background-color:#323232;font-size: 12px;font-family: '微软雅黑';}
+		.tab{float:left;margin-right:50px;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./css/tab.css">
+</head>
+<body>
+	<div id="js-tab-1" class="tab">
+		<ul class="tab-nav">
+			<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+			<li><a href="#">娱乐</a></li>
+			<li><a href="#">电影</a></li>
+			<li><a href="#">科技</a></li>
+		</ul>
+		<div class="content-wrap">
+			<div class="content-item current"><img src="./images/t1.png" alt=""></div>
+			<div class="content-item"><img src="./images/t2.png" alt=""></div>
+			<div class="content-item"><img src="./images/t3.png" alt=""></div>
+			<div class="content-item"><img src="./images/t4.png" alt=""></div>
+		</div>
+	</div>
+	<div id="js-tab-2" class="tab">
+		<ul class="tab-nav">
+			<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+			<li><a href="#">娱乐</a></li>
+			<li><a href="#">电影</a></li>
+			<li><a href="#">科技</a></li>
+		</ul>
+		<div class="content-wrap">
+			<div class="content-item current"><img src="./images/t1.png" alt=""></div>
+			<div class="content-item"><img src="./images/t2.png" alt=""></div>
+			<div class="content-item"><img src="./images/t3.png" alt=""></div>
+			<div class="content-item"><img src="./images/t4.png" alt=""></div>
+		</div>
+	</div>
+	<div id="js-tab-3" class="tab">
+	<ul class="tab-nav">
+		<li class="actived"><a href="javascript:void(0);">新闻</a></li>
+		<li><a href="#">娱乐</a></li>
+		<li><a href="#">电影</a></li>
+		<li><a href="#">科技</a></li>
+	</ul>
+	<div class="content-wrap">
+		<div class="content-item current"><img src="./images/t1.png" alt=""></div>
+		<div class="content-item"><img src="./images/t2.png" alt=""></div>
+		<div class="content-item"><img src="./images/t3.png" alt=""></div>
+		<div class="content-item"><img src="./images/t4.png" alt=""></div>
+	</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="./js/tab.js"></script>
+	<script type="text/javascript">
+	tab1 = new Tab('#js-tab-1',{
+		"triggerType":"mouseover",
+		"invoke":1,
+		"auto":3000
+	});
+	Tab.init('#js-tab-2',{
+		"triggerType":"click",
+		"invoke":2,
+		"auto":2000
+	});
+	//注册成为jquery插件
+	$('#js-tab-3').tab({
+		"effect":"fade",
+		"invoke":3,
+		"auto":2000,
+		"triggerType":"mouseover"
+	});
+	</script>
+</body>
+</html>
